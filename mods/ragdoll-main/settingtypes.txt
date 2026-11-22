@@ -1,0 +1,36 @@
+# Ragdolls for players who die (the real body is hidden until respawn).
+ragdoll_players (Ragdolls for players) bool true
+
+# Ragdolls for mobs and other creatures.
+ragdoll_mobs (Ragdolls for mobs) bool true
+
+# Seconds a body stays before it goes. 0 = until there are too many.
+ragdoll_lifetime (Body lifetime) float 15 0 600
+
+# Most bodies at once (the oldest goes first).
+ragdoll_max (Most bodies at once) int 30 1 300
+
+# How a body goes: fade away, a puff of smoke, or just vanish.
+ragdoll_despawn (How bodies go) enum fade fade,poof,vanish
+
+# How hard the killing hit throws the body. 1: as far as the game's own
+# knockback would have thrown the creature (where the game has its own).
+ragdoll_impulse (Hit strength) float 0.25 0 5
+
+# How hard explosions throw bodies (killed by them, or already lying there).
+# 1: as hard as the game's own explosions push things.
+ragdoll_blast (Blast strength) float 1.5 0 5
+
+# How much bodies tumble as they fall.
+ragdoll_spin (Tumble) float 1 0 5
+
+# How far joints can bend: 1 = the built-in ranges (a leg swings about
+# 50 degrees front to back and 17 sideways, a head nods 34 and tilts 23...).
+ragdoll_joint_range (Joint range) float 1 0.2 3
+
+# How hard it gets to bend a joint as it nears its limit (0 = free right up to
+# the limit).
+ragdoll_joint_stiffness (Joint stiffness) float 1 0 5
+
+# A short red flash on the body at death.
+ragdoll_flash (Red flash) bool true
